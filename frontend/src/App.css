@@ -13,3 +13,11 @@
 @layer utilities {
   /* Mettre ici les class personnalisées comme dans du CSS classique */
 }
+
+li {
+  font-size: 40px;
+}
+
+li:hover {
+  color: red;
+}
