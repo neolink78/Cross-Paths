@@ -20,7 +20,7 @@ const categories = [
 export default function Categories() {
   return (
     <div>
-      <li>{categories}</li>
+      <h1>{categories}</h1>
     </div>
   );
 }
