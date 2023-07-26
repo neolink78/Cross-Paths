@@ -6,26 +6,34 @@ import { RiFolderUserFill } from "react-icons/ri";
 
 function NavBar() {
   return (
-    <header className="bottom-0 fixed w-full py-6">
-      <nav>
-        <ul className="flex justify-evenly">
-          <NavLink to="/">
+    <header className="bottom-0 fixed w-full h-[10vh] pb-6 bg-white z-20">
+      <nav className="h-full flex items-center">
+        <ul className="flex justify-evenly w-full">
+          <NavLink to="/search">
             <li>
               <TbMapPinSearch />
             </li>
           </NavLink>
-          <li>
-            <BiSolidCategoryAlt />
-          </li>
-          <li>
-            <RiFolderUserFill />
-          </li>
-          <li>
-            <HiChatBubbleOvalLeftEllipsis />
-          </li>
-          <li>
-            <BiSolidUser />
-          </li>
+          <NavLink to="/category">
+            <li>
+              <BiSolidCategoryAlt />
+            </li>
+          </NavLink>
+          <NavLink to="/favorites">
+            <li>
+              <RiFolderUserFill />
+            </li>
+          </NavLink>
+          <NavLink to="/chat">
+            <li>
+              <HiChatBubbleOvalLeftEllipsis />
+            </li>
+          </NavLink>
+          <NavLink to="/user">
+            <li>
+              <BiSolidUser />
+            </li>
+          </NavLink>
         </ul>
       </nav>
     </header>
