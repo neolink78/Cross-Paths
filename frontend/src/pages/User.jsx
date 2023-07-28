@@ -1,6 +1,6 @@
 function User() {
   return (
-    <section>
+    <section className="h-[80vh] mt-[10vh]">
       <h1>User</h1>
     </section>
   );

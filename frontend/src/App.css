@@ -14,6 +14,9 @@
   /* Mettre ici les class personnalisées comme dans du CSS classique */
 }
 
+h2 {
+  font-weight: bold;
+}
 
 li {
   font-size: 32px;
@@ -28,7 +31,7 @@ p {
   color: #b73160;
 }
 
-/** CATEGORIES START**/
+/** CATEGORIES START **/
 
 #categories > button > p {
   @apply h-full flex justify-center items-end py-4;
@@ -38,19 +41,19 @@ p {
   @apply h-40 w-36 m-2 rounded-md;
 }
 
-#categories button:nth-child(1) {
+#categories button:nth-child(1), #match button:nth-child(1) {
   background-color: rgb(130, 0, 0);
 }
 
-#categories button:nth-child(2) {
+#categories button:nth-child(2), #match button:nth-child(2) {
   background-color: rgb(0, 130, 0);
 }
 
-#categories button:nth-child(3) {
+#categories button:nth-child(3), #match button:nth-child(3) {
   background-color: rgb(0, 0, 130);
 }
 
-#categories button:nth-child(4) {
+#categories button:nth-child(4), #match button:nth-child(4) {
   background-color: rgb(140, 140, 0);
 }
 
@@ -59,24 +62,36 @@ p {
 /** SEARCH START **/
 
 #search button {
-  @apply h-12 w-12 bg-white rounded-full flex items-center justify-center;
+  @apply h-12 w-12 rounded-full flex items-center justify-center;
 }
 
 #cross {
- color: red;
+ background-color: red;
 }
 
 #star {
-  color: blue;
+  background-color: blue;
 }
 
 #heart {
-  color: green;
+  background-color: green;
  }
 
- #cross, #star, #heart {
+ #rewind {
+  background-color: rgb(209, 209, 0);
+ }
+
+ #cross, #star, #heart, #rewind {
   font-size: 18px;
+  color: white;
  }
 
 /** SEARCH END **/
 
+/** MATCH START **/
+
+#match button {
+  @apply h-6 w-[74px] rounded-md text-white;
+}
+
+/** MATCH END **/

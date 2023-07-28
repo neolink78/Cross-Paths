@@ -1,5 +1,6 @@
 import { ImCross } from "react-icons/im";
 import { BsStarFill, BsHeartFill } from "react-icons/bs";
+import { PiArrowCounterClockwiseBold } from "react-icons/pi";
 import { useEffect, useState } from "react";
 import * as Services from "../services/People.service";
 
@@ -20,7 +21,7 @@ function Search() {
           {/* cette div représente une personne */}
           <h1 className="p-6 text-xl">{people[nextPage].name}</h1>
           <p>{people[nextPage].description}</p>
-          <div className="flex justify-around h-[297px] items-end py-8">
+          <div className="flex justify-evenly h-[297px] items-end py-8">
             <button
               id="cross"
               type="button"
@@ -28,6 +29,9 @@ function Search() {
             >
               <ImCross />
             </button>
+          <button onClick={() => setNextPage(nextPage - 1)} id="rewind" type="button">
+            <PiArrowCounterClockwiseBold />
+          </button>
             <button
               id="star"
               type="button"
