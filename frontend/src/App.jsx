@@ -1,4 +1,5 @@
 import { Routes, Route } from "react-router-dom";
+import { useState } from "react";
 import NavBar from "./components/NavBar";
 import Header from "./components/Header";
 
@@ -11,7 +12,10 @@ import User from "./pages/User";
 
 import "./App.css";
 
-function App() {
+export default function App() {
+  const [selectedCategory, setSelectedCategory] = useState("à la recherche de l'amour")
+
+
   return (
     <div className="App">
       <main>
@@ -19,8 +23,8 @@ function App() {
         <NavBar />
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/search" element={<Search />} />
-          <Route path="/category" element={<Category />} />
+          <Route path="/search" element={<Search selectedCategory={selectedCategory} />} />
+          <Route path="/category" element={<Category setSelectedCategory={setSelectedCategory}/>} />
           <Route path="/favorites" element={<Favorites />} />
           <Route path="/chat" element={<Chat />} />
           <Route path="/user" element={<User />} />
@@ -28,6 +32,4 @@ function App() {
       </main>
     </div>
   );
-}
-
-export default App;
+};

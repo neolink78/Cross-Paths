@@ -1,4 +1,4 @@
-function Chat() {
+export default function Chat() {
   const matchs = [
     {
       id: 1,
@@ -98,8 +98,8 @@ function Chat() {
       <h2>Match</h2>
       <div className="flex py-5">
         {matchs.map((match, id) => (
-          <div className="flex flex-col mr-4 gap-2">
-            <div key={id} className="flex h-24 w-16">
+          <div key={id} className="flex flex-col mr-4 gap-2">
+            <div  className="flex h-24 w-16">
               <img
                 className="rounded-md h-full object-cover"
                 src={match.picture}
@@ -117,8 +117,8 @@ function Chat() {
         <button type="button">Travail</button>
       </div>
       <div>
-        {messages.map((message) => (
-          <div className="flex my-6 items-center">
+        {messages.map((message, id) => (
+          <div key={id} className="flex my-6 items-center">
             <img
               className="rounded-full h-14 mr-8"
               src={message.picture}
@@ -134,5 +134,3 @@ function Chat() {
     </section>
   );
 }
-
-export default Chat;
